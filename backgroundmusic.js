@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var audio = document.getElementById('backgroundMusic');
     var toggleButton = document.getElementById('toggleMusic');
     audio.volume = 0.1;
+
     // 切换音乐的状态
     function toggleMusic() {
         if (audio.paused) {
