@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 响应式meta标签 确保在不同设备上呈现正确的视图 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摇曳露营△</title>
+    <style>
+        /* 设置表格的样式 */
+        table {
+            border-collapse: collapse;
+            /* 合并单元格的边框 */
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        th,
+        td {
+            border: 0px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f2f2f2;
+            /* 设置偶数行的背景颜色 */
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        caption {
+            padding: 5px;
+            font-size: 20px;
+            color: white;
+            background-color: #a9a9a9;
+        }
+
+        .num {
+            width: 70px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="all_css.css">
+    <!-- 引入 Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css">
+    <!-- 引入 Bootstrap 样式表 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- 引入 Bootstrap JavaScript 文件-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- 背景音乐-->
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="music.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+    <button id="toggleMusic" onclick="toggleRotation()">
+        <img src="image/boki.png" width="70th" id="musicIcon">
+    </button>
+
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light custom-text downspace"
+        style="background: linear-gradient(to bottom, #34acdb 50%, #f39c12 50%);">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="image/logo.png">
+            </a>
+
+            <!-- 导航按钮（在小屏幕上显示） -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!-- 导航链接 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="index.html">作品介绍△ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="yuru_maincharacter.html">主要人物△ </a>
+                    </li>
+                    <li class="nav-item rigthspace active">
+                        <a class="nav-link" href="yuru_music.html">相关音乐△ </a>
+                    </li>
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="yuru_imagewall.html">视觉图△</a>
+                    </li>
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="yuru_mycamp.html">幸子の露营</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--第一季-->
+    <section class="bk">
+        <div class="container flex-container">
+            <div class="col-md-9 animate__animated animate__slideInLeft">
+                <h1 style="font-weight: bold;font-size: 25px;"><img src="image/tent.png" width="40px">第一季主题曲</h1>
+                <span style="font-weight: bold;font-size: 20px;">SHINY DAYS</span>
+                <ul>
+                    <li>收录了TV动画《摇曳露营△》第一季的片头曲「SHINY DAYS」和C/W曲「Just A Way You Are」、「Round of new thing」及对应伴奏。</li>
+                    <li>附DVD盘的DVD收录了表题曲「SHINY DAYS」的Music Video和制作花絮，摇曳露营△盘没有DVD，而是额外收录了由各务原抚子（CV.花守由美里）出演的广播剧。</li>
+                </ul>
+                <table>
+                    <tr>
+                        <th>曲序</th>
+                        <th>曲目</th>
+                        <th>时长</th>
+                    </tr>
+                    <tr>
+                        <td class="num">1</td>
+                        <td><a href="https://y.qq.com/n/ryqq/songDetail/002vLhjh0G0oDX" target="_blank">SHINY DAYS</a>
+                        </td>
+                        <td class="num">4:12</td>
+                    </tr>
+                    <tr>
+                        <td class="num">2</td>
+                        <td>Just A Way You Are</td>
+                        <td class="num">3:56</td>
+                    </tr>
+                    <tr>
+                        <td class="num">3</td>
+                        <td>Round of new thing</td>
+                        <td class="num">4:08</td>
+                    </tr>
+                    <tr>
+                        <td class="num">4</td>
+                        <td>SHINY DAYS(off vocal)</td>
+                        <td class="num">4:12</td>
+                    </tr>
+                    <tr>
+                        <td class="num">5</td>
+                        <td>Just A Way You Are(off vocal)</td>
+                        <td class="num">3:56</td>
+                    </tr>
+                    <tr>
+                        <td class="num">6</td>
+                        <td>Round of new thing(off vocal)</td>
+                        <td class="num">4:08</td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="col-md-4  animate__animated animate__slideInRight">
+                <br><br><br>
+                <img src="image/111.jpg" width="80%" height="auto">
+                <div>
+                    <table style="height: 70%;border-collapse: separate;text-align: center;font-size: 60%;width: 80%;">
+                        <tr>
+                            <td>发行</td>
+                            <td>5pb.Records</td>
+                        </tr>
+                        <tr>
+                            <td>发行地区</td>
+                            <td>日本</td>
+                        </tr>
+                        <tr>
+                            <td>发行日期</td>
+                            <td>2018年1月24日</td>
+                        </tr>
+                        <tr>
+                            <td>商品编号</td>
+                            <td>USSW-0069(附DVD盘)</td>
+                        </tr>
+                        <tr>
+                            <td>专辑类型</td>
+                            <td>单曲</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container flex-container">
+            <div class="col-md-9 animate__animated animate__slideInLeft">
+                <span style="font-weight: bold;font-size: 20px;">冬日晴朗</span>
+                <ul>
+                    <li>收录了TV动画《摇曳露营△》第一季的片尾曲「ふゆびより」和C/W曲「YURUSU」、「Time To Wake Up」及对应伴奏。</li>
+                    <li>动画盘的特典DVD收录了表题曲「ふゆびより」的Music Video和佐佐木惠梨单人露营的视频。</li>
+                </ul>
+                <table>
+                    <tr>
+                        <th>曲序</th>
+                        <th>曲目</th>
+                        <th>时长</th>
+                    </tr>
+                    <tr>
+                        <td class="num">1</td>
+                        <td><a href="https://y.qq.com/n/ryqq/songDetail/003pzwUg1hT1Mw" target="_blank">ふゆびより</a></td>
+                        <td class="num">4:38</td>
+                    </tr>
+                    <tr>
+                        <td class="num">2</td>
+                        <td>JYURUSU</td>
+                        <td class="num">3:29</td>
+                    </tr>
+                    <tr>
+                        <td class="num">3</td>
+                        <td>Time To Wake Up</td>
+                        <td class="num">4:16</td>
+                    </tr>
+                    <tr>
+                        <td class="num">4</td>
+                        <td>ふゆびより(off vocal)</td>
+                        <td class="num">4:38</td>
+                    </tr>
+                    <tr>
+                        <td class="num">5</td>
+                        <td>YURUSU(off vocal)</td>
+                        <td class="num">3:29</td>
+                    </tr>
+                    <tr>
+                        <td class="num">6</td>
+                        <td>Time To Wake Up(off vocal)</td>
+                        <td class="num">4:16</td>
+                    </tr>
+                </table>
+
+            </div>
+            <br>
+            <div class="col-md-4  animate__animated animate__slideInRight">
+                <br><br><br>
+                <img src="image/222.jpg" width="80%" height="auto">
+                <div>
+                    <table style="height: 70%;border-collapse: separate;text-align: center;font-size: 60%;width: 80%;">
+                        <tr>
+                            <td>发行</td>
+                            <td>5pb.Records</td>
+                        </tr>
+                        <tr>
+                            <td>发行地区</td>
+                            <td>日本</td>
+                        </tr>
+                        <tr>
+                            <td>发行日期</td>
+                            <td>2018年1月24日</td>
+                        </tr>
+                        <tr>
+                            <td>商品编号</td>
+                            <td>USSW-0071(通常盘)</td>
+                        </tr>
+                        <tr>
+                            <td>专辑类型</td>
+                            <td>单曲</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <!--房间露营-->
+    <section class="bk">
+        <div class="container flex-container">
+            <div class="col-md-9 animate__animated animate__slideInLeft">
+                <h1 style="font-weight: bold;font-size: 25px;"><img src="image/matchbox.png" width="40px">短篇动画主题曲</h1>
+                <span style="font-weight: bold;font-size: 20px;">The Sunshower</span>
+                <ul>
+                    <li>收录了短篇动画《室内露营△》的主题曲「The Sunshower」、《摇曳露营△》系列的印象歌「Isn't It Fun?」和C/W曲「1000miles」及对应伴奏。</li>
+                    <li>摇曳露营△盘的特典DVD收录了表题曲「The Sunshower」的Music Video和制作花絮。</li>
+                </ul>
+                <table>
+                    <tr>
+                        <th>曲序</th>
+                        <th>曲目</th>
+                        <th>时长</th>
+                    </tr>
+                    <tr>
+                        <td class="num">1</td>
+                        <td><a href="https://y.qq.com/n/ryqq/songDetail/002Z2i663HXs55" target="_blank">The
+                                Sunshower</a></td>
+                        <td class="num">4:30</td>
+                    </tr>
+                    <tr>
+                        <td class="num">2</td>
+                        <td>Isn't It Fun?</td>
+                        <td class="num">4:41</td>
+                    </tr>
+                    <tr>
+                        <td class="num">3</td>
+                        <td>1000miles</td>
+                        <td class="num">4:08</td>
+                    </tr>
+                    <tr>
+                        <td class="num">4</td>
+                        <td>The Sunshower - off vocal -</td>
+                        <td class="num">4:30</td>
+                    </tr>
+                    <tr>
+                        <td class="num">5</td>
+                        <td>Isn't It Fun? - off vocal -</td>
+                        <td class="num">4:41</td>
+                    </tr>
+                    <tr>
+                        <td class="num">6</td>
+                        <td>1000miles - off vocal -</td>
+                        <td class="num">4:08</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-md-4  animate__animated animate__slideInRight">
+                <br><br><br>
+                <img src="image/333.jpg" width="80%" height="auto">
+                <div>
+                    <table style="height: 70%;border-collapse: separate;text-align: center;font-size: 60%;width: 80%;">
+                        <tr>
+                            <td>发行</td>
+                            <td>MAGES.</td>
+                        </tr>
+                        <tr>
+                            <td>发行地区</td>
+                            <td>日本</td>
+                        </tr>
+                        <tr>
+                            <td>发行日期</td>
+                            <td>2020年1月29日</td>
+                        </tr>
+                        <tr>
+                            <td>商品编号</td>
+                            <td>USSW-0229(通常盘)</td>
+                        </tr>
+                        <tr>
+                            <td>专辑类型</td>
+                            <td>单曲</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+    <br>
+
+    <!--第二季-->
+    <section class="bk">
+        <div class="container flex-container">
+            <div class="col-md-9 animate__animated animate__slideInLeft">
+                <h1 style="font-weight: bold;font-size: 25px;"><img src="image/campfire.png" width="40px">第二季主题曲</h1>
+                <span style="font-weight: bold;font-size: 20px;">Seize The Day</span>
+                <ul>
+                    <li>收录了TV动画《摇曳露营△》第二季的片头曲「Seize The Day」和C/W曲「NO MORE PEAKY MODE」、「Party Fever Night!!」及对应伴奏。</li>
+                    <li>附DVD盘的DVD收录了表题曲「Seize The Day」的Music
+                        Video和制作花絮，动画盘没有DVD，而是额外收录了各务原抚子（CV.花守由美里）、土岐绫乃(cv.黑泽朋世)出演的广播剧。</li>
+                </ul>
+                <table>
+                    <tr>
+                        <th>曲序</th>
+                        <th>曲目</th>
+                        <th>时长</th>
+                    </tr>
+                    <tr>
+                        <td class="num">1</td>
+                        <td><a href="https://y.qq.com/n/ryqq/songDetail/002pudB23yup4r" target="_blank">Seize The
+                                Day</a></td>
+                        <td class="num">4:04</td>
+                    </tr>
+                    <tr>
+                        <td class="num">2</td>
+                        <td>NO MORE PEAKY MODE</td>
+                        <td class="num">3:58</td>
+                    </tr>
+                    <tr>
+                        <td class="num">3</td>
+                        <td>Party Fever Night!!</td>
+                        <td class="num">4:17</td>
+                    </tr>
+                    <tr>
+                        <td class="num">4</td>
+                        <td>Seize The Day - off vocal -</td>
+                        <td class="num">4:04</td>
+                    </tr>
+                    <tr>
+                        <td class="num">5</td>
+                        <td>NO MORE PEAKY MODE - off vocal -</td>
+                        <td class="num">3:58</td>
+                    </tr>
+                    <tr>
+                        <td class="num">6</td>
+                        <td>Party Fever Night!! - off vocal -</td>
+                        <td class="num">4:17</td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="col-md-4  animate__animated animate__slideInRight">
+                <br><br><br>
+                <img src="image/444.jpg" width="80%" height="auto">
+                <div>
+                    <table style="height: 70%;border-collapse: separate;text-align: center;font-size: 60%;width: 80%;">
+                        <tr>
+                            <td>发行</td>
+                            <td>5pb.Records</td>
+                        </tr>
+                        <tr>
+                            <td>发行地区</td>
+                            <td>日本</td>
+                        </tr>
+                        <tr>
+                            <td>发行日期</td>
+                            <td>2018年1月24日</td>
+                        </tr>
+                        <tr>
+                            <td>商品编号</td>
+                            <td>USSW-0069(附DVD盘)</td>
+                        </tr>
+                        <tr>
+                            <td>专辑类型</td>
+                            <td>单曲</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container flex-container">
+            <div class="col-md-9 animate__animated animate__slideInLeft">
+                <span style="font-weight: bold;font-size: 20px;">春日将至</span>
+                <ul>
+                    <li>收录了TV动画《摇曳露营△》第二季的片尾曲「はるのとなり」和C/W曲「Orchis」、「Majstang」及对应伴奏。</li>
+                    <li>动画盘的特典DVD收录了歌曲「はるのとなり」和「Orchis」的Music Video以及「はるのとなり」的制作花絮。</li>
+                </ul>
+                <table>
+                    <tr>
+                        <th>曲序</th>
+                        <th>曲目</th>
+                        <th>时长</th>
+                    </tr>
+                    <tr>
+                        <td class="num">1</td>
+                        <td><a href="https://y.qq.com/n/ryqq/songDetail/0028sVn11q0IYM" target="_blank">はるのとなり</a></td>
+                        <td class="num">3:38</td>
+                    </tr>
+                    <tr>
+                        <td class="num">2</td>
+                        <td>Orchis</td>
+                        <td class="num">3:56</td>
+                    </tr>
+                    <tr>
+                        <td class="num">3</td>
+                        <td>Majstang</td>
+                        <td class="num">5:00</td>
+                    </tr>
+                    <tr>
+                        <td class="num">4</td>
+                        <td>はるのとなり - off vocal -</td>
+                        <td class="num">3:38</td>
+                    </tr>
+                    <tr>
+                        <td class="num">5</td>
+                        <td>Orchis - off vocal -</td>
+                        <td class="num">3:56</td>
+                    </tr>
+                    <tr>
+                        <td class="num">6</td>
+                        <td>Majstang - off vocal -</td>
+                        <td class="num">5:00</td>
+                    </tr>
+                </table>
+
+            </div>
+            <br>
+            <div class="col-md-4  animate__animated animate__slideInRight">
+                <br><br><br>
+                <img src="image/555.jpg" width="80%" height="auto">
+                <div>
+                    <table style="height: 70%;border-collapse: separate;text-align: center;font-size: 60%;width: 80%;">
+                        <tr>
+                            <td>发行</td>
+                            <td>MAGES.</td>
+                        </tr>
+                        <tr>
+                            <td>发行地区</td>
+                            <td>日本</td>
+                        </tr>
+                        <tr>
+                            <td>发行日期</td>
+                            <td>2021年1月27日</td>
+                        </tr>
+                        <tr>
+                            <td>商品编号</td>
+                            <td>USSW-0287(通常盘)</td>
+                        </tr>
+                        <tr>
+                            <td>专辑类型</td>
+                            <td>单曲</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <!--电影-->
+    <section class="bk">
+        <div class="container flex-container">
+            <div class="col-md-9 animate__animated animate__slideInLeft">
+                <h1 style="font-weight: bold;font-size: 25px;"><img src="image/firewood.png" width="40px">电影主题曲</h1>
+                <span style="font-weight: bold;font-size: 20px;">Sun Is Coming Up</span>
+                <ul>
+                    <li>收录了电影《摇曳露营△》的片头曲「Sun Is Coming Up」和『日清咖喱饭』×『摇曳露营△』的联动曲「Easy Life, Easy Curry
+                        -カレーメシのうた-」、C/W曲「Say "I love you"」及对应伴奏。</li>
+                    <li>附DVD盘的DVD收录了表题曲「Sun Is Coming Up」的Music Video和制作花絮，摇曳露营△盘另收录了各务原抚子（CV.花守由美里）、志摩凛(cv.东山奈央)出演的广播剧。
+                    </li>
+                </ul>
+                <table>
+                    <tr>
+                        <th>曲序</th>
+                        <th>曲目</th>
+                        <th>时长</th>
+                    </tr>
+                    <tr>
+                        <td class="num">1</td>
+                        <td><a href="https://y.qq.com/n/ryqq/songDetail/003ZIKr81WfMf7" target="_blank">Sun Is Coming
+                                Up</a></td>
+                        <td class="num">4:13</td>
+                    </tr>
+                    <tr>
+                        <td class="num">2</td>
+                        <td>Easy Life, Easy Curry -カレーメシのうた-</td>
+                        <td class="num">4:09</td>
+                    </tr>
+                    <tr>
+                        <td class="num">3</td>
+                        <td>Say "I love you"</td>
+                        <td class="num">4:09</td>
+                    </tr>
+                    <tr>
+                        <td class="num">4</td>
+                        <td>Sun Is Coming Up off vocal</td>
+                        <td class="num">4:13</td>
+                    </tr>
+                    <tr>
+                        <td class="num">5</td>
+                        <td>Easy Life, Easy Curry -カレーメシのうた- off vocal</td>
+                        <td class="num">4:09</td>
+                    </tr>
+                    <tr>
+                        <td class="num">6</td>
+                        <td>Say "I love you" off vocal</td>
+                        <td class="num">4:09</td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="col-md-4  animate__animated animate__slideInRight">
+                <br><br><br>
+                <img src="image/666.jpg" width="80%" height="auto">
+                <div>
+                    <table style="height: 70%;border-collapse: separate;text-align: center;font-size: 60%;width: 80%;">
+                        <tr>
+                            <td>发行</td>
+                            <td>MAGES.</td>
+                        </tr>
+                        <tr>
+                            <td>发行地区</td>
+                            <td>日本</td>
+                        </tr>
+                        <tr>
+                            <td>发行日期</td>
+                            <td>2022年6月29日</td>
+                        </tr>
+                        <tr>
+                            <td>商品编号</td>
+                            <td>USSW-0350(附DVD盘)</td>
+                        </tr>
+                        <tr>
+                            <td>专辑类型</td>
+                            <td>单曲</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+        <div class="container flex-container">
+            <div class="col-md-9 animate__animated animate__slideInLeft">
+                <span style="font-weight: bold;font-size: 20px;">银荆</span>
+                <ul>
+                    <li>收录了电影《摇曳露营△》的片尾曲「ミモザ」和C/W曲「透明散歩」、「Twin Ray」及对应伴奏。</li>
+                    <li>动画盘的特典DVD收录了歌曲「ミモザ」的Music Video和制作花絮。</li>
+                </ul>
+                <table>
+                    <tr>
+                        <th>曲序</th>
+                        <th>曲目</th>
+                        <th>时长</th>
+                    </tr>
+                    <tr>
+                        <td class="num">1</td>
+                        <td><a href="https://y.qq.com/n/ryqq/songDetail/002UMHIZ4UZlDR" target="_blank">ミモザ</a></td>
+                        <td class="num">4:19</td>
+                    </tr>
+                    <tr>
+                        <td class="num">2</td>
+                        <td>透明散歩</td>
+                        <td class="num">3:32</td>
+                    </tr>
+                    <tr>
+                        <td class="num">3</td>
+                        <td>Twin Ray</td>
+                        <td class="num">4:14</td>
+                    </tr>
+                    <tr>
+                        <td class="num">4</td>
+                        <td>ミモザ - off vocal -</td>
+                        <td class="num">4:19</td>
+                    </tr>
+                    <tr>
+                        <td class="num">5</td>
+                        <td>透明散歩 - off vocal -</td>
+                        <td class="num">3:32</td>
+                    </tr>
+                    <tr>
+                        <td class="num">6</td>
+                        <td>Twin Ray - off vocal -</td>
+                        <td class="num">4:14</td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="col-md-4  animate__animated animate__slideInRight">
+                <br><br><br>
+                <img src="image/777.jpg" width="80%" height="auto">
+                <div>
+                    <table style="height: 70%;border-collapse: separate;text-align: center;font-size: 60%;width: 80%;">
+                        <tr>
+                            <td>发行</td>
+                            <td>MAGES.</td>
+                        </tr>
+                        <tr>
+                            <td>发行地区</td>
+                            <td>日本</td>
+                        </tr>
+                        <tr>
+                            <td>发行日期</td>
+                            <td>2022年6月29日</td>
+                        </tr>
+                        <tr>
+                            <td>商品编号</td>
+                            <td>USSW-0353(通常盘)</td>
+                        </tr>
+                        <tr>
+                            <td>专辑类型</td>
+                            <td>单曲</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+    </section>
+    <script src="backgroundmusic.js"></script>
+</body>
+
+</html>

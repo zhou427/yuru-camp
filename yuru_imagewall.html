@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 响应式meta标签 确保在不同设备上呈现正确的视图 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摇曳露营△</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+        :root {
+            --crimson: crimson;
+            --black: #333;
+            --white: #fff;
+            --light-black: #666;
+            --light-bg: #eee;
+            --dark-bg: rgba(0, 0, 0, .7);
+            --border: 1px solid #999;
+            --box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+        }
+
+        * {
+            font-family: 'CustomFont';
+            src: url('zfont286/上首龙猫体.ttf') format('woff');
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            transition: all .2s linear;
+        }
+
+        .gallery {
+            padding: 20px;
+            text-align: center;
+            padding-left: 320px;
+        }
+
+        .gallery .image-container {
+            gap: 15px;
+            columns: 3 350px;
+        }
+
+        .gallery .image-container img {
+            break-inside: avoid;
+            width: 100%;
+            background-color: var(--white);
+            object-fit: cover;
+            cursor: pointer;
+            margin-bottom: 10px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .gallery .image-container img:hover {
+            transform: scale(.95);
+        }
+
+        .image-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1200;
+            background-color: var(--dark-bg);
+            height: 100vh;
+            width: 100%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px;
+            overflow-y: scroll;
+        }
+
+        .image-popup img {
+            width: 600px;
+            cursor: pointer;
+            border: 10px solid var(--white);
+            background-color: var(--white);
+        }
+    </style>
+    <link rel="stylesheet" href="all_css.css">
+    <!-- 引入 Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css">
+    <!-- 引入 Bootstrap 样式表 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- 引入 Bootstrap JavaScript 文件-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- 背景音乐-->
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="music.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+    <button id="toggleMusic" onclick="toggleRotation()">
+        <img src="image/boki.png" width="70th" id="musicIcon">
+    </button>
+
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light custom-text downspace"
+        style="background: linear-gradient(to bottom, #34acdb 50%, #f39c12 50%);">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="image/logo.png">
+            </a>
+
+            <!-- 导航按钮（在小屏幕上显示） -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!-- 导航链接 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="index.html">作品介绍△ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="yuru_maincharacter.html">主要人物△ </a>
+                    </li>
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="yuru_music.html">相关音乐△ </a>
+                    </li>
+                    <li class="nav-item rigthspace active">
+                        <a class="nav-link" href="yuru_imagewall.html">视觉图△</a>
+                    </li>
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="yuru_mycamp.html">幸子の露营</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="gallery bk">
+        <div class="image-container">
+            <img src="image/w.jpg">
+            <img src="image/e.jpg">
+            <img src="image/r.jpg">
+            <img src="image/t.jpg">
+            <img src="image/y.jpg">
+            <img src="image/u.jpg">
+            <img src="image/i.jpg">
+            <img src="image/q.jpg">
+            <img src="image/o.jpg">
+            <img src="image/p.jpg">
+            <img src="image/a.jpg">
+            <img src="image/s.jpg">
+            <img src="image/d.jpg">
+            <img src="image/f.jpg">
+            <img src="image/g.jpg">
+            <img src="image/h.jpg">
+            <img src="image/j.jpg">
+            <img src="image/k.jpg">
+            <img src="image/l.jpg">
+            <img src="image/z.jpg">
+            <img src="image/x.jpg">
+            <img src="image/c.jpg">
+            <img src="image/v.jpg">
+            <img src="image/b.jpg">
+            <img src="image/n.jpg">
+            <img src="image/m.jpg">
+            <img src="image/qw.jpg">
+            <img src="image/we.jpg">
+            <img src="image/er.jpg">
+            <img src="image/rt.jpg">
+            <img src="image/ty.jpg">
+            <img src="image/yu.jpg">
+        </div>
+    </div>
+    <div class="image-popup">
+        <img src="" alt="">
+    </div>
+
+    <script>
+        let galleryImages = document.querySelectorAll('.image-container img');
+        let imagePop = document.querySelector('.image-popup');
+        galleryImages.forEach(img => {
+            img.onclick = () => {
+                let imageSrc = img.getAttribute('src');
+                imagePop.style.display = 'flex';
+                imagePop.querySelector('img').src = imageSrc;
+            };
+        });
+        imagePop.onclick = () => {
+            imagePop.style.display = 'none';
+        };
+    </script>
+    <script src="backgroundmusic.js"></script>
+</body>
+
+</html>
+css

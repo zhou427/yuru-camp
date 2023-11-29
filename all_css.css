@@ -1,0 +1,287 @@
+        .navbar {
+            margin: 0 auto;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+
+        .upspace {
+            margin-top: 15px;
+        }
+
+        .downspace {
+            margin-bottom: 15px;
+        }
+
+        .rigthspace {
+            margin-right: 20px;
+        }
+
+        /*划掉*/
+        .strikethrough {
+            text-decoration: line-through;
+        }
+
+        /*BGM按钮*/
+        #toggleMusic {
+            background-color: rgba(255, 255, 255, 0);
+            border: 0;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            z-index: 999;
+            /* 确保按钮位于其他元素上方 */
+        }
+
+        #toggleMusic {
+            background: none;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+        #toggleMusic img {
+            width: 70px;
+            transition: transform 0.5s linear;
+            /* 添加过渡效果，linear表示线性过渡 */
+        }
+
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('zfont286/上首龙猫体.ttf') format('woff');
+        }
+
+        .flex-container {
+            display: flex;
+            /* 使用 Flexbox 布局 */
+            justify-content: space-between;
+            /* 子元素之间的空间分布为两端对齐 */
+        }
+
+        /* 文本样式 */
+        .text {
+            margin-right: 10px;
+            /* 添加一些右边距，以区分文本和图片 */
+        }
+
+        .custom-text {
+            font-family: 'CustomFont', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fffdfd;
+        }
+
+        .bk {
+            background-color: rgba(255, 255, 255, 0.85);
+            margin: 0 auto;
+            width: 80%;
+            border-radius: 20px;
+            padding: 10px;
+            /* 添加一些内边距，以突显圆角效果 */
+        }
+
+        .bk2 {
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 0 auto;
+            width: 80%;
+
+        }
+
+        body {
+            cursor: url('image/tent.ico'), auto;
+            background-image: url('image/Yurucamp_Series_Visual.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: #f0f0f0;
+            /* 背景颜色，如果图片加载失败或未覆盖整个屏幕 */
+            background-attachment: fixed;
+            /* 固定背景，不随页面滚动 */
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .mid {
+            margin: 0 auto;
+        }
+
+        .totop {
+            position: fixed;
+            top: 0;
+
+        }
+
+        /*轮播图*/
+        .box {
+            margin: 0 auto;
+            width: 68vw;
+            height: 410px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            /* 设置 3D 转换，以便于创建立体效果 */
+            transform-style: preserve-3d;
+            /* 定义立体效果的观察距离 */
+            perspective: 800px;
+            /*  定义容器内包含的元素数量 */
+            --items: 19;
+            /* 定义容器内居中显示的元素 */
+            --middle: 3;
+            /* 定义容器内当前位置的元素 */
+            --position: 1;
+
+        }
+
+        div.item {
+            position: absolute;
+            width: 280px;
+            height: 400px;
+            background-color: rgb(255, 255, 255);
+            /* 定义一个 CSS 变量 --r 的值为 var(--position) - var(--offset) */
+            --r: calc(var(--position) - var(--offset));
+            /* 定义变量 --abs 的值为 var(--r) * -1 和 var(--r) 中的最大值 */
+            --abs: max(calc(var(--r) * -1), var(--r));
+            /* 元素的过渡效果为所有属性在 0.25 秒内以线性方式变化 */
+            transition: all 0.25s linear;
+            /* 旋转-10deg*var(--r)角度,并向x轴负方向平移-330px*var(--r) */
+            transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-330px * var(--r)));
+            /* 使当前的图片位于最前面 */
+            z-index: calc((var(--position) - var(--abs)));
+            background-size: cover;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
+        }
+
+        .box .item:nth-of-type(1) {
+            --offset: 1;
+            background-image: url(image/14.jpg);
+        }
+
+        .box .item:nth-of-type(2) {
+            --offset: 2;
+            background-image: url(image/15.jpg);
+        }
+
+        .box .item:nth-of-type(3) {
+            --offset: 3;
+            background-image: url(image/1.jpg);
+        }
+
+        .box .item:nth-of-type(4) {
+            --offset: 4;
+            background-image: url(image/2.jpg);
+        }
+
+        .box .item:nth-of-type(5) {
+            --offset: 5;
+            background-image: url(image/3.jpg);
+        }
+
+        .box .item:nth-of-type(6) {
+            --offset: 6;
+            background-image: url(image/4.jpg);
+        }
+
+        .box .item:nth-of-type(7) {
+            --offset: 7;
+            background-image: url(image/5.jpg);
+        }
+
+        .box .item:nth-of-type(8) {
+            --offset: 8;
+            background-image: url(image/6.jpg);
+        }
+
+        .box .item:nth-of-type(9) {
+            --offset: 9;
+            background-image: url(image/7.jpg);
+        }
+
+        .box .item:nth-of-type(10) {
+            --offset: 10;
+            background-image: url(image/8.jpg);
+        }
+
+        .box .item:nth-of-type(11) {
+            --offset: 11;
+            background-image: url(image/9.jpg);
+        }
+
+        .box .item:nth-of-type(12) {
+            --offset: 12;
+            background-image: url(image/10.jpg);
+        }
+
+        .box .item:nth-of-type(13) {
+            --offset: 13;
+            background-image: url(image/11.jpg);
+        }
+
+        .box .item:nth-of-type(14) {
+            --offset: 14;
+            background-image: url(image/12.jpg);
+        }
+
+        .box .item:nth-of-type(15) {
+            --offset: 15;
+            background-image: url(image/13.jpg);
+        }
+
+        .box .item:nth-of-type(16) {
+            --offset: 16;
+            background-image: url(image/14.jpg);
+        }
+
+        .box .item:nth-of-type(17) {
+            --offset: 17;
+            background-image: url(image/15.jpg);
+        }
+
+        .box .item:nth-of-type(18) {
+            --offset: 18;
+            background-image: url(image/1.jpg);
+        }
+
+        .box .item:nth-of-type(19) {
+            --offset: 19;
+            background-image: url(image/2.jpg);
+        }
+
+        .swch button {
+            /* 按钮样式 */
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 1px solid #171717;
+            background-color: #fff;
+            margin: 10px;
+            cursor: pointer;
+            transition: 0.4s;
+            box-sizing: border-box;
+
+        }
+
+        .swch button:hover {
+            /* 悬停时的样式 */
+            background-color: #000;
+            color: #fff;
+        }
+
+        .ll {
+            display: block;
+            width: 100vw;
+        }
+
+        /*首字下沉*/
+        .first-letter {
+            font-size: 150%;
+            /* 设置首字母的字体大小 */
+            font-weight: bold;
+            /* 设置首字母的字体加粗 */
+            float: left;
+            /* 使首字母脱离文本流，形成文字环绕效果 */
+            margin-right: 6px;
+            /* 设置首字母右边距 */
+        }

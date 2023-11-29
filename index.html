@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 响应式meta标签 确保在不同设备上呈现正确的视图 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摇曳露营△</title>
+    <style>
+        /* 添加图片悬停效果 */
+        .hover-effect-container {
+            width: 226px;
+            height: 300px;
+            transition: 0.3s;
+            transition-delay: .1s;
+            border-radius: 0px;
+            border: #fff 0px solid;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hover-effect-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 40px rgba(0, 0, 0, 0);
+        }
+
+        .hover-effect-container .images img {
+            width: 100%;
+        }
+
+        .hover-effect-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 15%;
+            /* 使文字容器与图片宽度一致 */
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            box-sizing: border-box;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .hover-effect-container:hover .hover-effect-text {
+            transform: translateY(0);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="all_css.css">
+    <!-- 引入 Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css">
+    <!-- 引入 Bootstrap 样式表 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- 引入 Bootstrap JavaScript 文件-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+    <!-- 背景音乐-->
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="music.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+    <button id="toggleMusic" onclick="toggleRotation()">
+        <img src="image/boki.png" width="70th" id="musicIcon">
+    </button>
+
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light custom-text downspace"
+        style="background: linear-gradient(to bottom, #34acdb 50%, #f39c12 50%);">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="image/logo.png">
+            </a>
+
+            <!-- 导航按钮（在小屏幕上显示） -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!-- 导航链接 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item rigthspace active">
+                        <a class="nav-link" href="index.html">作品介绍△ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="yuru_maincharacter.html">主要人物△ </a>
+                    </li>
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="yuru_music.html">相关音乐△ </a>
+                    </li>
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="yuru_imagewall.html">视觉图△</a>
+                    </li>
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="yuru_mycamp.html">幸子の露营</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="ll">
+        <div class="bk downspace">
+            <div class="box">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+
+            <div class="swch container flex-container">
+                <button onclick="prevSlide()">←</button>
+                <button onclick="nextSlide()">→</button>
+            </div>
+
+            <div class="container flex-container">
+                <div class="col-md-7 animate__animated animate__slideInLeft text">
+                    <p class="first-letter">摇曳露营△</p>
+                    <p>（日语：ゆるキャン△；英语：Laid-Back Camp）是由あfろ创作的一部漫画，并有动画等衍生作品。</p>
+                    <p>原作于芳文社的《Manga Time Kirara Forward》2015年7月号开始连载。2019年开始移籍到芳文社旗下的App“COMIC FUZ”连载。
+
+                        以山梨县以及富士山周边一带作舞台，描述露营中的知识、野炊等户外活动的魅力，以及以此作为娱乐的女高中生的温和日常（美食）生活。
+
+                        原作漫画标题末端的“△”，代表露营帐篷的象形符号；电视动画版的图片LOGO则以“▲”代替（文字标题仍为△）。
+
+                        2022年9月30日，宣布暂时休载，后于2023年2月3日恢复连载。
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="animate__animated animate__slideInRight hover-effect-container">
+                        <div class="images">
+                            <img src="image/q.jpg">
+                        </div>
+
+                        <div class="hover-effect-text">
+                            <p>1期主视觉图3</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let currentPosition = 3;
+        let intervalId;
+
+        // 在文档加载完成后启动自动轮播
+        document.addEventListener('DOMContentLoaded', function () {
+            updateSlider();
+            startAutoSlide();
+        });
+
+        // 启动自动轮播的函数
+        function startAutoSlide() {
+            intervalId = setInterval(nextSlide, 2500); // 切换到下一张图片，间隔为 2000 毫秒 (2 秒)
+        }
+
+        // 停止自动轮播的函数
+        function stopAutoSlide() {
+            clearInterval(intervalId); // 清除定时器
+        }
+
+        // 鼠标移入时停止自动轮播，移出时重新启动
+        document.querySelector('.box ').addEventListener('mouseenter', stopAutoSlide);
+        document.querySelector('.box').addEventListener('mouseleave', startAutoSlide);
+        document.querySelector('.prev ').addEventListener('mouseenter', stopAutoSlide);
+        document.querySelector('.prev').addEventListener('mouseleave', startAutoSlide);
+        document.querySelector('.next ').addEventListener('mouseenter', stopAutoSlide);
+        document.querySelector('.next').addEventListener('mouseleave', startAutoSlide);
+
+        function updateSlider() {
+            document.querySelector('.box').style.setProperty('--position', currentPosition);
+        }
+
+        function prevSlide() {
+            currentPosition = (currentPosition - 1 + 19) % 19 || 19;
+            if (currentPosition == 2) {
+                currentPosition = 17;
+            }
+            updateSlider();
+        }
+
+        function nextSlide() {
+            currentPosition = (currentPosition + 1) % 19 || 1;
+            if (currentPosition == 18) {
+                currentPosition = 3;
+            }
+            updateSlider();
+        }
+
+
+    </script>
+    <script src="backgroundmusic.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 响应式meta标签 确保在不同设备上呈现正确的视图 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摇曳露营△</title>
+    <style>
+        .shell-r {
+            width: 80%;
+            height: 700px;
+            display: flex;
+        }
+
+        .box-r {
+            flex: 1;
+            /* 弹性盒子，占据可用空间的剩余部分 */
+            overflow: hidden;
+            transition: .5s;
+            margin: 0 20px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, .5);
+            border-radius: 20px;
+            border: 10px solid #fff;
+            background-color: #fff;
+        }
+
+        .box-r img {
+            width: 100%;
+            height: 90%;
+            object-fit: cover;
+            transition: .5s;
+            /* 过渡效果时长为0.5秒 */
+        }
+
+        .box-r>span {
+            font: 200 30px '优设标题黑';
+            text-align: center;
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box-r:hover {
+            flex-basis: 25%;
+        }
+
+        .box-r:hover img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .folded-image {
+            overflow: hidden;
+            max-height: 0;
+            /* 初始折叠时的最大高度 */
+            transition: max-height 0.5s ease;
+            /* 添加过渡效果 */
+        }
+
+        .unfold-button {
+            cursor: pointer;
+            color: blue;
+        }
+    </style>
+
+    <link rel="stylesheet" href="all_css.css">
+    <!-- 引入 Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css">
+    <!-- 引入 Bootstrap 样式表 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- 引入 Bootstrap JavaScript 文件-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- 背景音乐-->
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="music.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+    <button id="toggleMusic" onclick="toggleRotation()">
+        <img src="image/boki.png" width="70th" id="musicIcon">
+    </button>
+
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light custom-text downspace"
+        style="background: linear-gradient(to bottom, #34acdb 50%, #f39c12 50%);">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="image/logo.png">
+            </a>
+
+            <!-- 导航按钮（在小屏幕上显示） -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!-- 导航链接 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="index.html">作品介绍△ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item rigthspace active">
+                        <a class="nav-link" href="yuru_maincharacter.html">主要人物△ </a>
+                    </li>
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="yuru_music.html">相关音乐△ </a>
+                    </li>
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="yuru_imagewall.html">视觉图△</a>
+                    </li>
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="yuru_mycamp.html">幸子の露营</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="shell-r bk">
+        <div class="box-r">
+            <a href="#section1"><img src="image/r.jpg"></a>
+            <span>抚子</span>
+        </div>
+        <div class="box-r">
+            <a href="#section2"><img src="image/t.jpg"></a>
+            <span>凛</span>
+        </div>
+        <div class="box-r">
+            <a href="#section3"><img src="image/y.jpg"></a>
+            <span>千明</span>
+        </div>
+        <div class="box-r">
+            <a href="#section4"><img src="image/u.jpg"></a>
+            <span>葵</span>
+        </div>
+        <div class="box-r">
+            <a href="#section5"><img src="image/i.jpg"></a>
+            <span>惠娜</span>
+        </div>
+    </div>
+
+    <br>
+    <!--各务原抚子-->
+    <section class="bk downspace" id="section1">
+        <div class="container flex-container">
+            <div class="col-md-7 animate__animated animate__slideInLeft text">
+                <p class="first-letter">各务原抚子</p>
+                <p>（各務原 なでしこ／かがみはら なでしこ Kagamihara Nadeshiko）</p>
+                <p>声优为花守由美里。3月4日生日。一个天真烂漫开朗乐观的女孩。粉红色长发绑成双马尾，蓝曈。</p>
+                <p>自从在湖畔遇到凛之后就被露营所吸引，并加入了高中的野外活动社团。</p>
+
+                <p> 总是开朗乐观，喜欢令人愉快的事情。总是会很热情地对待他人，可以很自然地融入任何群体，多次被吐槽像狗狗一样。</p>
+
+                <p> 放松时会说出被凛认为是乡下的婆婆才会说出的话。</p>
+
+                <p> 有一个很漂亮的姐姐。</p>
+
+                <p> 拥有的自行车原型为ALVLAYS。</p>
+
+                <p> 吃货<span class="strikethrough">（星之卡比拟人化）</span>。曾在为凛做火锅的时候放入一整袋50个饺子，当凛吃完一碗想再装时发现锅已经空了，随后又掏出薯片准备吃。
+                </p>
+
+                <p> 十分擅长料理，尤其是锅物料理，被千明增加了“锅子”（读作なべしこ，与抚子的名なでしこ谐音，釜子）的别号。促使千明、葵和惠那达成了“让锅子成为大家的新娘吧，就可以把好吃的锅物料理吃个爽”的共识。</p>
+
+                <p> 因为喜欢富士山而被叫做Fujiko（富士子/不二子）</p>
+
+                <p>名字中的各務原捏他自岐阜县南部的各務原市。</p>
+
+                <p>连载前的初期设定：本来是想将其设定成一个跟现在完全相反，十分文静的角色，后来和凛的初期设定大致上对调后创作出现在的活泼形象。</p>
+            </div>
+
+            <div class="animate__animated animate__slideInRight">
+                <img src="image/各务原抚子人设图S2.jpg" width="100%" height="auto">
+                <img src="image/抚子睡觉.gif" width="60%">
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <!--志摩凛-->
+    <section class="bk downspace" id="section2">
+        <div class="container flex-container">
+            <div class="animate__animated animate__slideInLeft">
+                <img src="image/志摩凛人设图S2.jpg" width="100%" height="auto">
+                <img src="image/凛.gif" width="60%">
+                <div class="folded-image" id="foldedImage">
+                    <img src="image/凛撞狗.gif">
+                </div>
+
+            </div>
+
+            <div class="col-md-7 animate__animated animate__slideInRight text">
+                <p class="first-letter">志摩凛</p>
+                <p>（志摩 リン／しま リン Shima Rin）</p>
+                <p>声优为东山奈央。10月1日生。身高推断在145cm以下，有着和小学生没两样的体型，深灰蓝色头发及腰并时不时会扎成一个很大的丸子。紫曈。</p>
+                <p>在爷爷的影响下开始露营的独自露营者。</p>
+
+                <p> 与抚子相遇后，第一次有了与他人一同露营的经验。</p>
+
+                <p> 并非野外社团所属，但对抚子有一点在意。</p>
+
+                <p> 被野外社团称为芝麻凛，保持着一种微妙的关系。</p>
+
+                <p> 是学校的图书委员。也在书店做打工兼职，常常在单人露营时独自读书。</p>
+
+                <p> 体型娇小，并且十分喜欢狗。<span class="strikethrough">（同时也是个吃货，且因为抚子的美食而逐渐对多人的露营有了好感。）</span></p>
+
+                <p> 使用的帐篷为mont-bell Moonlight Tent 3。</p>
+
+                <p> 摩托车座驾为YAMAHA Vino Classic，车牌号是本栖 7 み66-376。座驾检修时代用YAMAHA Tricity。</p>
+
+                <p>自行车为DAHON Boardwalk D7。</p>
+
+                <p>连载前的初期设定：设定上原本是抚子和千明的混合版，但由于对一个喜欢单人露营的女孩而言，这种性格有点烦人，因此经过多次修正后创作出现在的文静形象。</p>
+
+                <p>名字中的志摩来自三重县志摩半岛南部的志摩市。</p>
+
+                <p class="strikethrough">凛酱有一个流传很广的动图——被狗创飞的少女。<span class="unfold-button"
+                        onclick="toggleImage()">点击展开/折叠</span></p>
+            </div>
+
+
+        </div>
+    </section>
+
+    <br>
+    <!--大垣千明-->
+    <section class="bk downspace" id="section3">
+        <div class="container flex-container">
+            <div class="animate__animated animate__slideInLeft">
+                <img src="image/千明人设图S2.jpg" width="100%" height="auto">
+            </div>
+
+            <div class="col-md-7 animate__animated animate__slideInRight text">
+                <p class="first-letter">大垣千明</p>
+                <p>（大垣 千明／おおがき ちあき Ōgaki Chiaki）</p>
+                <p>声优为原纱友里。8月31日生日。一名享乐主义的行动派女孩。紫发棕曈，戴眼镜并束着双马尾。</p>
+                <p>本栖高校「野外活动露营」社团的部长。</p>
+
+                <p>经常和葵在稀少的活动预算金下，不断摸索如何以便宜的道具和废料活用在户外活动上。 </p>
+
+                <p>是最先带来有趣东西的开朗行动派。</p>
+
+                <p>有着吵闹而快活的性格，但也有着爱流泪的充满人情味的一面。 </p>
+
+                <p> 由于“想要露营！”，而和葵一起成立了野外社团。</p>
+
+                <p>名字中的大垣捏他自日本中部岐阜县西南方的大垣市。</p>
+            </div>
+
+
+        </div>
+    </section>
+
+    <br>
+    <!--犬山葵-->
+    <section class="bk downspace" id="section4">
+        <div class="container flex-container">
+            <div class="col-md-7 animate__animated animate__fadeIn text">
+                <p class="first-letter">犬山葵</p>
+                <p>（犬山 あおい／いぬやま あおい Inuyama Aoi）</p>
+                <p>声优为丰崎爱生。3月4日生日。把亚麻色头发绑成单侧马尾，绿曈。</p>
+                <p>用关西腔说话的沉稳系。せやな（Seyana.）～</p>
+
+                <p> 在总是向前冲的野外社团成员中，是会在关键时刻顾虑大家的，背后领袖的存在。</p>
+
+                <p>特征是太眉与虎牙。<span class="strikethrough">眉毛可以出现在头发乃至帽子的外面。在漫画第八卷的番外，葵的眉毛因为图层设置为顶层甚至出现在建筑物外面（大雾）。</span>
+                </p>
+
+                <p>被千明称呼为「犬子」。 </p>
+
+                <p> 本栖高校「野外活动露营」社团的创始人之一。</p>
+
+                <p> 和抚子生日同一天。</p>
+
+                <p> 在第五话中被发现是巨乳。<span class="strikethrough">（本作福利担当）</span>
+                </p>
+
+                <p> 擅长吹牛。<span class="strikethrough">吹牛时会露出如死鱼眼般的眼神</span></p>
+
+                <p>名字中的犬山捏他自爱知县尾张地方东北部的犬山市。</p>
+            </div>
+
+            <div class="animate__animated animate__slideInRight">
+                <img src="image/犬山葵人设图S2.jpg" width="100%" height="auto">
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <!--齐藤惠那-->
+    <section class="bk downspace" id="section5">
+        <div class="container flex-container">
+            <div class="col-md-7 animate__animated animate__fadeIn text">
+                <p class="first-letter">齐藤惠那</p>
+                <p>（斉藤 恵那／さいとう えな Saitō Ena）</p>
+                <p>声优为高桥李依，9月1日生日。黑色短发，蓝瞳。经常使用SNS与凛聊天。常常过着晚睡晚起的生活，曾经试过一天睡了14小时后又爬回床上睡觉。</p>
+                <p>凛的朋友。</p>
+
+                <p> 我行我素的自由人。</p>
+
+                <p>并不是野外社团的部员，但经常对野外社团的活动表现出兴趣。</p>
+
+                <p> 会若无其事地给不擅长与人交往的凛提出忠告。</p>
+
+                <p> 养了一只名叫竹轮的犬。</p>
+
+                <p> 有着把人的头发束成奇葩造型的恶作剧心态，曾把凛的头发束成熊或者日本城、把抚子的头发束成仙人掌。<span class="strikethrough">擅长捉弄人的高桥李依同学</span>
+                </p>
+            </div>
+
+            <div class="animate__animated animate__slideInRight">
+                <img src="image/齐藤惠那人设图S2.jpg" width="100%" height="auto">
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        var isUnfolded = false;
+
+        function toggleImage() {
+            var foldedImage = document.getElementById('foldedImage');
+
+            if (isUnfolded) {
+                // 如果当前是展开状态，则折叠
+                foldedImage.style.maxHeight = '0';
+            } else {
+                // 如果当前是折叠状态，则展开
+                foldedImage.style.maxHeight = '100%'; // 或者其他你想要的高度
+            }
+
+            // 切换状态
+            isUnfolded = !isUnfolded;
+        }
+    </script>
+
+    <script src="backgroundmusic.js"></script>
+</body>
+
+</html>

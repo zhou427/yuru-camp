@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 响应式meta标签 确保在不同设备上呈现正确的视图 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摇曳露营△</title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="all_css.css">
+    <!-- 引入 Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css">
+    <!-- 引入 Bootstrap 样式表 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- 引入 Bootstrap JavaScript 文件-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+    <!-- 背景音乐-->
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="music.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+    <button id="toggleMusic" onclick="toggleRotation()">
+        <img src="image/boki.png" width="70th" id="musicIcon">
+    </button>
+
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light custom-text downspace"
+        style="background: linear-gradient(to bottom, #34acdb 50%, #f39c12 50%);">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="image/logo.png">
+            </a>
+
+            <!-- 导航按钮（在小屏幕上显示） -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!-- 导航链接 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="index.html">作品介绍△ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="yuru_maincharacter.html">主要人物△ </a>
+                    </li>
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="yuru_music.html">相关音乐△ </a>
+                    </li>
+                    <li class="nav-item rigthspace">
+                        <a class="nav-link" href="yuru_imagewall.html">视觉图△</a>
+                    </li>
+                    <li class="nav-item rigthspace active">
+                        <a class="nav-link" href="yuru_mycamp.html">幸子の露营</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bk">
+        <div style="width: 100%;">
+            <h3>“什么？摇曳露营在哪能看？传送面板已上线，我们的行动会更加迅捷！”</h3>
+        </div>
+        <div class="container flex-container">
+            <a href="https://www.acfun.cn/search?keyword=%E6%91%87%E6%9B%B3%E9%9C%B2%E8%90%A5" target="_blank"><img
+                    src="image/传送面板.png" width="100%"></a>
+
+            <img src="image/秩序之光.png" width="50%">
+        </div>
+    </div>
+    <br>
+    <div class="bk">
+        <div class="container flex-container">
+            <span>
+                这里，是我个人的一些想法。<br>
+                这个网站虽然是个作业，但我做得超级满足！因为是一部相当喜欢的作品。<br>
+                《摇曳露营》是一部对我影响十分深刻的作品。第一次看是是高二吧，“生活原来还能过得如此悠闲、自由、美好。“。<br>
+                虽然还想说更多感想，但我打下这段话的时候已经是凌晨3:44了，已经困的不行了，后续择日再添上！<br>
+                以后可能会把我自己的露营记录也放上来，变成一个类似博客的东西？<br>
+                <img src="image/firstcamping.jpg" width="70%"><br>
+                我的露营之路的第一步:D
+            </span>
+        </div>
+    </div>
+
+    <script src="backgroundmusic.js"></script>
+</body>
+
+
+</html>
